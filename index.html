@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <aside>
+        <div class="logo">
+            <img src="img/siatar.png" alt="">
+            <a href="#">Simcup<span>Aplikasi Medical Check-Up</span></a>
+        </div> 
+        <nav>
+            <ul>
+                <li><a href="index.html"><span><i class='bx bxs-dashboard'></i></span>Dashboard</a></li>
+                <li><a href="#" onclick="toggleMenu(event)"><span><i class='bx bx-user'></i></span>Pasien<i class='bx bx-chevron-down' ></i></a>
+                    <ul>
+                        <li><a href="list_sm.html">Daftar Pasien</a></li>
+                        <li><a href="create_sm.html">Tambah Pasien</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="toggleMenu(event)"><span><i class='bx bx-dna'></i></span>Pemeriksaan<i class='bx bx-chevron-down' ></i></a>
+                    <ul>
+                        <li><a href="#">Jadwal Pemeriksaan</a></li>
+                        <li><a href="#">Input Hasil Pemeriksaan</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span><i class='bx bxs-report'></i></span>Laporan</a></li>
+                <li><a href="#"><span><i class='bx bx-cog'></i></span>Pengaturan</a></li>
+                <li><a href="#"><span><i class='bx bx-log-in-circle'></i></span>Logout</a></li>
+            </ul>
+        </nav>
+        <div class="header">
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <p>Hello Admin!</p>
+        </div>
+    </aside>
+
+    <main>
+        <h1>Dashboard</h1>
+        <section class="dashboard">
+            <div class="main-content">
+                <div class="item">
+                    <span>
+                        <h2>300</h2>
+                        <p>Jumlah Pasien</p>
+                    </span>
+                    <i class='bx bx-envelope-open'></i>
+                </div>
+
+                <div class="item">
+                    <span>
+                        <h2>200</h2>
+                        <p>Pemeriksaan Sedang Berlangsung</p>
+                    </span>
+                    <i class='bx bx-envelope-open'></i>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
