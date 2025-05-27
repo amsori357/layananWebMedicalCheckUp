@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+
+:root {
+    --bg-color: #e2f2fb;
+    --hover-color: #44bcf4;
+    --btn-hover: #00a8f7;
+    --border-color: #ababab;
+    --color-placeholder: #757575;
+    --aside-color: #fff; 
+    --text-color: #1a1a1a;
+
+    --trans-03: all .3s ease;
+    --trans-04: all .4s ease;
+    --trans-05: all .5s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    color: var(--text-color);
+}
+
+body {
+    display: flex;
+    background: var(--bg-color);
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 60px;
+    padding: 10px;
+    font-size: .78rem;
+    background: var(--aside-color);
+    box-shadow: 0 3px 5px rgba(0,0,0,.2);
+    transition: var(--trans-05);
+}
+
+aside.slide {
+    width: 250px;
+    transition: var(--trans-05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+.logo a {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.logo a span {
+    font-weight: 300;
+}
+
+nav {
+    margin-top: 30px;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: -1;
+}
+
+nav::-webkit-scrollbar {
+    width: .5rem;
+}
+
+nav::-webkit-scrollbar-track, nav::-webkit-scrollbar-thumb{
+    background: transparent;
+}
+
+nav ul li {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+nav ul li:nth-child(6) {
+    margin-bottom: 100px;
+}
+
+nav ul li a {
+    height: 40px;
+    white-space: nowrap;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: var(--trans-03);
+}
+
+nav ul li a span {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+nav ul li a i {
+    font-size: 1rem;
+    transition: var(--trans-03);
+}
+
+nav ul li a i.bx-chevron-down {
+    margin-left: 70px;
+}
+
+nav ul li a:hover {
+    background: var(--hover-color);
+    color: var(--aside-color);
+}
+
+nav ul li a:hover i {
+    color: var(--aside-color);
+}
+
+nav ul li ul {
+    position: relative;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: var(--trans-05);
+}
+
+nav ul li ul.show {
+    max-height: 200px;
+    opacity: 1;
+    transition: var(--trans-05);
+}
+
+nav ul li ul li {
+    position: relative;
+    margin: 0;
+}
+
+nav ul li ul li a {
+    font-size: .75rem;
+    padding-left: 55px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 60px;
+    width: 100%;
+    padding: 0 20px 0 80px;
+    background: var(--aside-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--trans-05);
+    z-index: -1;
+}
+
+.header.slide {
+    padding-left: 270px;
+    transition: var(--trans-05);
+}
+
+.menu-toggle {
+    display: flex;
+    height: 18px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -10.5px;
+    left: -10.5px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 2px;
+    width: 20px;
+    border-radius: 5px;
+    background: var(--text-color);
+    transition: var(--trans-03);
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    width: 9px;
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    width: 15px;
+}
+
+/* main section */
+
+main {
+    width: 100%;
+    padding: 60px 20px 10px 80px;
+    transition: var(--trans-05);
+}
+
+main.slide {
+    padding-left: 270px;
+    transition: var(--trans-05);
+}
+
+section {
+    font-size: .78rem;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--aside-color);
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+/* dashboard */
+
+.dashboard {
+    padding: 0;
+    background: none;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.item {
+    min-width: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    background: var(--aside-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item span h2 {
+    font-size: 3rem;
+}
+
+.item span p {
+    font-size: .78rem;
+}
+
+.item i {
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--hover-color);
+    color: var(--aside-color);
+}
+
+/* table */
+
+.table-container {
+    width: 100%;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background: var(--bg-color);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: var(--hover-color);
+    color: var(--aside-color);
+}
+
+tfoot {
+    background: var(--hover-color);
+}
+
+tfoot td {
+    color: var(--aside-color);
+}
+
+/* search */
+
+.search {
+    margin: 10px 0 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search input, .search button {
+    height: 35px;
+    border: 1px solid #ababab;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.search input:focus {
+    border: 1px solid var(--hover-color);
+}
+
+.search button {
+    border: none;
+    background: var(--hover-color);
+    color: var(--aside-color);
+    cursor: pointer;
+}
+
+.search button:hover {
+    background: var(--btn-hover);
+}
+
+/* form crud */
+
+form ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+form ul li:last-child {
+    margin-top: 20px;
+}
+
+form ul li label {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form ul li input, form ul li button {
+    flex: 1;
+    height: 35px;
+    border: 1px solid #ababab;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+input[type="date"] {
+    color: var(--color-placeholder);
+    font-size: .78rem;
+}
+
+form ul li input:focus {
+    border: 1px solid var(--hover-color);
+}
+
+form ul li button {
+    border: none;
+    background: var(--hover-color);
+    color: var(--aside-color);
+    cursor: pointer;
+}
+
+form ul li button:hover {
+    background: var(--btn-hover);
+}
+
+/* responsive breakpoint */
+
+@media screen and (max-width: 768px) {
+    form ul li {
+        display: block;
+    }
+
+    form ul li label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    form ul li input, form ul li button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    aside {
+        left: -65px;
+    }
+
+    aside.slide {
+        left: 0;
+    }
+
+    .header, main, main.slide {
+        padding-left: 20px;
+    }
+
+    .header p {
+        display: none;
+    }
+
+    table {
+        white-space: nowrap;
+    }
+
+    form ul li {
+        display: block;
+    }
+
+    form ul li label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    form ul li input, form ul li button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    aside {
+        padding-left: 5px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    nav {
+        margin-top: 50px;
+    }
+
+    nav ul li a span {
+        width: 30px;
+    }
+
+    nav ul li ul li a {
+        padding-left: 45px;
+    }
+
+    .header {
+        height: 50px;
+    }
+
+    .header, .header.slide, main, main.slide {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .item {
+        min-width: 100px;
+        padding: 10px;
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+
+    .item i {
+        border-radius: 50%;
+    }
+}
