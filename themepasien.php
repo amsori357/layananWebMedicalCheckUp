@@ -39,13 +39,8 @@ if (!empty($username)) {
         </div>
          <nav>
             <ul>
-                <li><a href="index.php"><span><i class='bx bxs-dashboard'></i></span>Dashboard</a></li>
-                <li><a href="#" onclick="toggleMenu(event)"><span><i class='bx bx-dna'></i></span>Pemeriksaan<i class='bx bx-chevron-down' ></i></a>
-                    <ul>
-                        <li><a href="jadwalpemeriksaan.php">Jadwal Pemeriksaan</a></li>
-                        <li><a href="pemeriksaan.php">Input Hasil Pemeriksaan</a></li>
-                    </ul>
-                </li>
+                <li><a href="jadwalpemeriksaan.php" onclick="toggleMenu(event)"><span><i class='bx bx-dna'></i></span>Jadwal Pemeriksaan</a></li>
+                <li><a href="laporan.php"><span><i class='bx bxs-report'></i></span>Laporan</a></li>
                 <li><a href="logout.php"><span><i class='bx bx-log-in-circle'></i></span>Logout</a></li>
             </ul>
         </nav>

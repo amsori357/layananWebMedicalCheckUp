@@ -61,6 +61,16 @@ if(isset($_POST["submit"])){
 
                     <label for="alamat">Alamat Lengkap</label>
                     <input type="text" name="alamat">
+
+                    <label for="jadwal_pemeriksaan">jadwal pemeriksaan</label>
+                    <input type="date" name="jadwal_pemeriksaan">
+
+                    <label for="status_pemeriksaan">Keterangan Pemeriksaan</label>
+                    <select name="status_pemeriksaan">
+                        <option value="">-- Pilih Keterangan Pemeriksaan</option>
+                        <option value="Selesai Diperiksa">Selesai Diperiksa</option>
+                        <option value="Belum Diperiksa">Belum Diperiksa</option>
+                    </select>
                 </fieldset>
 
                 <button type="submit" name="submit">Tambah Pasien</button>

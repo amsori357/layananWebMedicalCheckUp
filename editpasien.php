@@ -67,6 +67,16 @@ if(isset($_POST["submit"])){
 
                     <label for="alamat">Alamat Lengkap</label>
                     <input type="text" name="alamat" value="<?= htmlspecialchars($p["alamat"]); ?>">
+
+                    <label for="jadwal_pemeriksaan">Jadwal Pemeriksaan</label>
+                    <input type="date" name="jadwal_pemeriksaan" value="<?= htmlspecialchars($p["jadwal_pemeriksaan"]); ?>">
+
+                    <label for="status_pemeriksaan">Apakah sudah di periksan / belum</label>
+                    <select name="status_pemeriksaan">
+                        <option value="">-- sudah / belum --</option>
+                        <option value="Sudah Diperiksa" <?= htmlspecialchars($p["status_pemeriksaan"] == "Sudah Diperiksa") ? "selected" : ""; ?>>Sudah Diperiksa</option>
+                        <option value="Belum Diperiksa" <?= htmlspecialchars($p["status_pemeriksaan"] == "Belum Diperiksa") ? "selected" : ""; ?>>Belum Diperiksa</option>
+                    </select>
                 </fieldset>
 
                 <button type="submit" name="submit">Edit Pasien</button>

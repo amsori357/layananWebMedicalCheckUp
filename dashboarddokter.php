@@ -12,17 +12,9 @@ require 'config/functions.php';
 // // Pilih template berdasarkan role
 $template = getTemplate();
 
-// $teacher = query("SELECT id FROM teacher");
-// $class = query("SELECT id FROM class");
-// $students = query("SELECT id FROM students");
-// $mapel = query("SELECT id FROM mapel");
-// $p = query("SELECT * FROM profile_school")[0];
+$pasien = query("SELECT id_pasien FROM pasien");
 
-
-// $t = count($teacher);
-// $c = count($class);
-// $s = count($students);
-// $m = count($mapel);
+$p = count($pasien);
 
 ?>
 
@@ -44,7 +36,7 @@ $template = getTemplate();
                 <div class="item">
                     <div class="text">
                         <p>Medical Check-Up</p>
-                        <h2>123</h2>
+                        <h2><?= $p; ?></h2>
                         <span>Jumlah Pasien</span>
                     </div>
                     <i class='bx bx-accessibility'></i>
@@ -53,7 +45,7 @@ $template = getTemplate();
                 <div class="item">
                     <div class="text">
                         <p>Medical Check-Up</p>
-                        <h2>123</h2>
+                        <h2><?= $p; ?></h2>
                         <span>Pemeriksaan</span>
                     </div>
                     <i class='bx bx-briefcase-alt-2'></i>
