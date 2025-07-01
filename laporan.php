@@ -82,6 +82,7 @@ if(isset($_POST["search"])){
                                 <ul>
                                     <li>
                                         <a href="print.php?id_pasien=<?= htmlspecialchars(urlencode($p["id_pasien"])); ?>">Cetak Laporan</a>
+                                        <a href="lihatlaporan.php?id_pasien=<?= htmlspecialchars(urlencode($p["id_pasien"])); ?>" class="view">Lihat Laporan</a>
                                     </li>
                                 </ul>
                             </td>
